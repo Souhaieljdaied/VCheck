@@ -1,0 +1,87 @@
+<div class="mainpage" >
+    <div class="first-content">
+        <div class="first-content-left" >
+            <h1> On vous aide a Choisir 
+                le bon vehicule
+            </h1>
+            <span>
+                Évitez les problèmes coûteux en vérifiant 
+                l'historique d'un véhicule. Saisissez un NIV pour obtenir instantanément un rapport détaillé.
+            </span>
+
+<!---------------------------->
+<div class="card">
+  <div class="toolbar">
+    <div class="toolbar-items">
+      <a
+        (click)="check('mat')"
+        class="toolbar-item"
+        [ngClass]="{ 'toolbar-item-active': mat == true }"
+        ><div>MATRICULE</div></a
+      >
+      <a
+        (click)="check('vin')"
+        class="toolbar-item"
+        [ngClass]="{ 'toolbar-item-active': mat == false }"
+        ><div>VIN</div></a
+      >
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="Mat-section">
+    <!---------------------->
+    <div *ngIf="mat" class="Mat-section-MATRICULE">
+      <div class="matricula-container">
+        <input
+          class="matricula-input"
+          type="text"
+          placeholder="* * *"
+          maxlength="3"
+        />
+        <div class="middle-text">تونس</div>
+        <input
+          class="matricula-input"
+          type="text"
+          placeholder="* * * *"
+          maxlength="4"
+        />
+      </div>
+      <button mat-raised-button class="submit-button">RECHERCHE</button>
+    </div>
+    <!---------------------->
+ 
+    <div *ngIf="!mat" class="Mat-section-VIN">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="text"
+          ngModel
+          vin="vin"
+          #vin="ngModel"
+          placeholder="NUMERO DE CHASSIS (VIN)"
+          minlength="4"
+          maxlength="20"
+          required
+        />
+        <mat-error *ngIf="vin.invalid"
+          >Vin is <strong>required</strong></mat-error
+        >
+      </mat-form-field>
+      <button mat-raised-button class="submit-button">RECHERCHE</button>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="first-content-right" >
+            <img src="../../assets/yala.png" class="main-image" alt="">
+        </div>
+
+       
+
+
+    </div>
+
+
+</div>
+  

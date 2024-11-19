@@ -1,0 +1,20 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.logo{
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  background-color: black;
+}
+.mat-toolbar{
+  height: 60px;
+}
+.main-buttons{
+
+margin-right: 40px;
+}
+.gap-button{
+  display: flex;
+  gap: 10px;
+}
